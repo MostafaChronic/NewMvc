@@ -18,7 +18,7 @@ namespace Mvc.Models.Entity
         public string Password { get; set; }
         public bool Gender { get; set; }
         public bool IsBlock { get; set; }
-        public DateTime  RegisterDate { get; set; }
+        public DateTime ? RegisterDate { get; set; }
 
         public AccountTypes AccountType { get; set; }
 

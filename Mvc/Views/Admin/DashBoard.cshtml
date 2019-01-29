@@ -3,5 +3,302 @@
     ViewBag.Title = "DashBoard";
 }
 
-<h2>DashBoard</h2>
 
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <style>
+        .noty_message {
+            font-family: IRANSans;
+            font-size: 12px;
+        }
+
+        .field-validation-error {
+            position: absolute;
+            left: 0;
+            color: #fa7373;
+            font-family: IRANSans;
+            font-size: 12px;
+        }
+    </style>
+
+
+    <title>Music</title>
+    @*<link rel="icon" type="image/x-icon" href="@Url.Content("~/Content/Images/admin (1).png")">*@
+
+    <!--Css Style Files-->
+
+    <script src="~/Scripts/Noty/jquery.noty.packaged.min.js"></script>
+    @RenderSection("Styles", false)
+
+    <script src="~/Content/script/sly.min.js"></script>
+
+</head>
+<body>
+    <div class="overlay">
+
+        @RenderSection("Overlay", false)
+
+    </div>
+    @RenderSection("NewOverlay", false)
+    <aside class="menu menu-dark">
+        <div class="site-info">
+            <a href="/Admin/Dashboard">
+                <img src="~/Content/Images/final logo small.png" style="width: 100%; height: 100%;">
+                <h2>پنل مدیریتی تابلو اعلانات</h2>
+            </a>
+        </div>
+
+        <ul>
+            <li>
+                <a href="/Admin/Dashboard">
+                    <i class="material-icons">dashboard</i>
+                    <h3>داشبرد</h3>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="/Admin/ContactList">
+                    <i class="material-icons">mail</i>
+                    <h3>صندوق ورودی</h3>
+                </a>
+            </li>
+
+
+
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">slideshow</i>
+                    <h3>مدیریت استان ها </h3>
+                </a>
+
+                <ul>
+                    <li>
+                        <a id="location" href="/Admin/AddLocation">لیست و افزودن استان و شهر</a>
+                    </li>
+
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">assessment</i>
+
+                    <h3>مدیریت آگهی ها </h3>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="/Admin/AddProduct">درج آگهی </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/AddCategory">مدیریت دسته بندی آگهی ها </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/ProductList">آگهی های تایید نشده </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/IsConfirm_ProductList">مشاهده آگهی های تایید شده  </a>
+                    </li>
+                </ul>
+
+            </li>
+
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">slideshow</i>
+                    <h3>مدیریت اسلایدر </h3>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="/Admin/AddSlider">درج اسلایدر </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/SliderList">مشاهده همه آیتم ها </a>
+                    </li>
+
+                </ul>
+            </li>
+
+
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">assessment</i>
+
+                    <h3>مدیریت تبلیغات </h3>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="/Admin/AddAdvertise">درج تبلیغ  </a>
+                    </li>
+                    <li>
+                        <a href="/Admin/AdvertiseList">مشاهده همه آیتم ها </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">shopping_cart</i>
+
+                    <h3>مدیریت سفارشات </h3>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="/Admin/BuysList">مشاهده همه سفارش ها </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">group </i>
+
+                    <h3>مدیریت کاربران </h3>
+                </a>
+
+                <ul>
+                    <li>
+                        <a href="/Admin/AddAccount">افزودن کاربر </a>
+
+                    </li>
+                    <li>
+                        <a href="/Admin/AccountList">مشاهده همه کاربران </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">comment </i>
+
+                    <h3>مدیریت صفحات </h3>
+                </a>
+
+                <ul>
+                    @*<li><a href="~/Admin/AddAbouts"> درج صفحات </a> </li>*@
+                    <li><a href="~/Admin/AddQusetions"> پرسش های متداول </a> </li>
+                    <li>
+                        <a href="~/Admin/درباره_ما">درباره ما </a>
+                    </li>
+                    <li>
+                        <a href="~/Admin/شرایط_و_قوانین"> شرایط و قوانین </a>
+                    </li>
+                    <li>
+                        <a href="~/Admin/شرایط_معاوضه">شرایط معاوضه </a>
+                    </li>
+                    <li>
+                        <a href="~/Admin/شرایط_بازگرداندن_کالا">شرایط بازگرداندن کالا </a>
+                    </li>
+
+                </ul>
+            </li>
+            <li class="has-sub">
+                <a>
+                    <i class="material-icons">account_box</i>
+                    <h3>تنظیمات فردی</h3>
+                </a>
+                <ul>
+                    <li><a href="/Admin/PanelProfile">مشاهده پروفایل کاربر</a></li>
+                    <li><a href="/Admin/EditProfile">ویرایش اطلاعات کاربری</a></li>
+                </ul>
+            </li>
+        </ul>
+    </aside>
+    <div class="panel-holder" id="panelHolder">
+
+        <header class="panel-header">
+            <section class="left-float">
+                <div class="profile">
+                    <i class="material-icons profile-pic">account_circle</i>
+                    @*@{ int acountid;
+                        var fullname = "";
+                        Kala_be_Kala.Models.DomainModels.Account find = null;
+                        if (User.Identity.IsAuthenticated)
+                        {
+                            acountid = Convert.ToInt32(User.Identity.Name);
+                            Kala_be_Kala.Models.Repository.AccountRepository acbl = new Kala_be_Kala.Models.Repository.AccountRepository();
+                            find = acbl.find(acountid);
+                            fullname = find.FirstName + " " + find.LastName;
+                        }
+
+                    }
+
+
+                    @if (find.FirstName != null && find.LastName != null)
+                    {
+                        <span>@fullname </span>
+
+                    }
+                    else
+                    {
+                        <span>@find.UserName </span>
+
+                    }*@
+
+
+                    <i class="material-icons up">keyboard_arrow_down</i>
+                    <div class="detail">
+                        <ul>
+                            <li>
+                                <img src="~/Content/Images/Account/Admin/@*@find.Picture*@" class="profile-pic" />
+                                <div>
+                                    <a href="/Admin/PanelProfile" class="profile-name">@*@find.UserName*@</a>
+                                    <a href="/Admin/" class="profile-edit">ویرایش اطلاعات</a>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="/Home/Index" class="btn view-site">نمایش سایت</a>
+                                <a href="/Home/Logout" class="btn exit-profile">خروج از حساب کاربری</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="right-float">
+                <div class="minimize-menu">
+                    <span></span>
+                </div>
+            </section>
+        </header>
+
+        <main class="content">
+
+            <div class="path-url">
+                <a href="#" class="material-icons home">home</a>
+                <i class="material-icons">keyboard_arrow_left</i>
+                <a href="#" class="material-icons"><span>@*@RenderSection("One", false)*@</span></a>
+                <i class="material-icons">keyboard_arrow_left</i>
+                <a href="#" class="material-icons"><span>@*@RenderSection("Two", false)*@</span></a>
+            </div>
+
+            @RenderBody()
+
+        </main>
+
+
+    </div>
+
+    <script src="~/Content/Script/AdminScript.js"></script>
+
+    @*@Scripts.Render("~/bundles/jqueryval")*@
+    @*@Scripts.Render("~/bundles/Ajaxform")*@
+
+
+    @RenderSection("Scripts", false)
+
+
+
+
+
+
+
+
+</body>
+</html>

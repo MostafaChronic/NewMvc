@@ -7,13 +7,13 @@ namespace Mvc.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AddTableForDb : IMigrationMetadata
+    public sealed partial class AddnewTablesinProject : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AddTableForDb));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AddnewTablesinProject));
         
         string IMigrationMetadata.Id
         {
-            get { return "201901291008540_Add Table For Db"; }
+            get { return "201901291306371_Add new Tables in Project"; }
         }
         
         string IMigrationMetadata.Source

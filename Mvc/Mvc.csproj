@@ -134,9 +134,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201901291008540_Add Table For Db.cs" />
-    <Compile Include="Migrations\201901291008540_Add Table For Db.Designer.cs">
-      <DependentUpon>201901291008540_Add Table For Db.cs</DependentUpon>
+    <Compile Include="Migrations\201901291248581_Initial Product.cs" />
+    <Compile Include="Migrations\201901291248581_Initial Product.Designer.cs">
+      <DependentUpon>201901291248581_Initial Product.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901291251390_Add News Table.cs" />
+    <Compile Include="Migrations\201901291251390_Add News Table.Designer.cs">
+      <DependentUpon>201901291251390_Add News Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901291306371_Add new Tables in Project.cs" />
+    <Compile Include="Migrations\201901291306371_Add new Tables in Project.Designer.cs">
+      <DependentUpon>201901291306371_Add new Tables in Project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901291310556_add new attrbuite In account Table.cs" />
+    <Compile Include="Migrations\201901291310556_add new attrbuite In account Table.Designer.cs">
+      <DependentUpon>201901291310556_add new attrbuite In account Table.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -168,8 +180,17 @@
     <Folder Include="Models\Repository\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201901291008540_Add Table For Db.resx">
-      <DependentUpon>201901291008540_Add Table For Db.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201901291248581_Initial Product.resx">
+      <DependentUpon>201901291248581_Initial Product.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291251390_Add News Table.resx">
+      <DependentUpon>201901291251390_Add News Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291306371_Add new Tables in Project.resx">
+      <DependentUpon>201901291306371_Add new Tables in Project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291310556_add new attrbuite In account Table.resx">
+      <DependentUpon>201901291310556_add new attrbuite In account Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -11,7 +11,7 @@ namespace Mvc.Models.Entity
         public int AccountId { get; set; }
         public int NewsId { get; set; }
         public string Commandtxt { get; set; }
-        public DateTime LikeDate { get; set; }
+        public DateTime CommandDate { get; set; }
         public virtual Account Account { get; set; }
         public virtual News News { get; set; }
     }

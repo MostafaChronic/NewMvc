@@ -146,6 +146,10 @@
     <Compile Include="Migrations\201901291251390_Add News Table.Designer.cs">
       <DependentUpon>201901291251390_Add News Table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201901291303216_New Tables.cs" />
+    <Compile Include="Migrations\201901291303216_New Tables.Designer.cs">
+      <DependentUpon>201901291303216_New Tables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201901291306371_Add new Tables in Project.cs" />
     <Compile Include="Migrations\201901291306371_Add new Tables in Project.Designer.cs">
       <DependentUpon>201901291306371_Add new Tables in Project.cs</DependentUpon>
@@ -161,6 +165,10 @@
     <Compile Include="Migrations\201901291502162_Add dbsets.cs" />
     <Compile Include="Migrations\201901291502162_Add dbsets.Designer.cs">
       <DependentUpon>201901291502162_Add dbsets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201901300647496_Add new Dat anotaion In tabeles.cs" />
+    <Compile Include="Migrations\201901300647496_Add new Dat anotaion In tabeles.Designer.cs">
+      <DependentUpon>201901300647496_Add new Dat anotaion In tabeles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\Account.cs" />
@@ -203,6 +211,9 @@
     <EmbeddedResource Include="Migrations\201901291251390_Add News Table.resx">
       <DependentUpon>201901291251390_Add News Table.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901291303216_New Tables.resx">
+      <DependentUpon>201901291303216_New Tables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901291306371_Add new Tables in Project.resx">
       <DependentUpon>201901291306371_Add new Tables in Project.cs</DependentUpon>
     </EmbeddedResource>
@@ -214,6 +225,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201901291502162_Add dbsets.resx">
       <DependentUpon>201901291502162_Add dbsets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201901300647496_Add new Dat anotaion In tabeles.resx">
+      <DependentUpon>201901300647496_Add new Dat anotaion In tabeles.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

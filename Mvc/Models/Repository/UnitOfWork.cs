@@ -9,9 +9,8 @@ namespace Mvc.Models.Repository
     public class UnitOfWork : IDisposable
     {
         Contextes db = new Contextes();
-
+        //Account Uint
         private AllRepositoies<Account> AccountRp;
-
         public AllRepositoies<Account> AccountsRp
         {
             get
@@ -24,6 +23,7 @@ namespace Mvc.Models.Repository
                 return AccountRp;
             }
         }
+        //Account Uint
 
         public void Dispose()
         {

@@ -17,6 +17,7 @@ namespace Mvc.Models.Entity
         public string Fname { get; set; }
         public string Lname { get; set; }
         public string Username { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
         public string Password { get; set; }
         public bool Gender { get; set; }
